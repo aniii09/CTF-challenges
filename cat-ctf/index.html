@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the Red Flag 🐱</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #111;
+            color: white;
+            font-family: Arial, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            max-width: 520px;
+            width: 100%;
+            background: #1c1c1c;
+            padding: 35px;
+            border-radius: 20px;
+            border: 1px solid #333;
+            box-shadow: 0 0 30px #ff334433;
+        }
+
+        h1 {
+            color: #ff4757;
+            font-size: 28px;
+            margin-bottom: 25px;
+        }
+
+       img {
+            width: 350px;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 18px;
+            border: 3px solid #ff4757;
+            box-shadow: 0 0 25px #ff475766;
+            margin-bottom: 20px;
+            max-width: 100%;
+}
+
+        .subtitle {
+            font-size: 19px;
+            color: #eee;
+            line-height: 1.6;
+            margin-bottom: 25px;
+        }
+
+        .options {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        button {
+            background: #292929;
+            color: white;
+            border: 1px solid #ff4757;
+            padding: 15px 22px;
+            border-radius: 12px;
+            font-size: 16px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        button:hover {
+            background: #ff4757;
+            transform: translateY(-3px);
+            box-shadow: 0 0 15px #ff475766;
+        }
+
+        #message {
+            display: none;
+            margin-top: 25px;
+            padding: 20px;
+            background: #292020;
+            border-radius: 12px;
+            border: 1px solid #ff4757;
+            color: #eee;
+            line-height: 1.8;
+            font-size: 16px;
+        }
+
+        #message strong {
+            color: #ff4757;
+        }
+
+        .footer {
+            color: #666;
+            font-size: 12px;
+            margin-top: 25px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>🚩 Looking for a red flag?</h1>
+
+        <img src="cat.jpg" alt="Suspicious Cat">
+
+        <p class="subtitle">
+            Bold of you to ask a cat. 😼
+            <br>
+            Choose your next move:
+        </p>
+
+        <div class="options">
+            <button onclick="showMessage(1)">
+                🐾 Pet me
+            </button>
+
+            <button onclick="showMessage(2)">
+                👀 Date me
+            </button>
+        </div>
+
+        <div id="message"></div>
+
+        <div class="footer">
+            Made with ❤️ and absolutely no red flags.
+        </div>
+
+    </div>
+
+    <script>
+        
+function showMessage(option) {
+    const message = document.getElementById("message");
+
+    message.style.display = "block";
+
+    if (option === 1) {
+        message.innerHTML =
+            'Aww, honey. I am <strong>NOT</strong> your ex, ' +
+            'stop checking me for red flags. 😾';
+    } else {
+        message.innerHTML =
+            'Well... that\'s a different story. 👀<br><br>' +
+            'But the REAL flag?<br><br>' +
+            '<strong>Try inspecting me. 😉</strong>';
+    }
+}
+
+    </script>
+
+    <!-- FLAG: ZDA{MAYBE_YOU_ARE_THE_RED_FLAG} -->
+
+</body>
+</html>
